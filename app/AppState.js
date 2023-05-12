@@ -3,6 +3,7 @@ import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
+import { House } from "./Models/House.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
@@ -22,6 +23,14 @@ class AppState extends EventEmitter {
   activeCar = null
 
   userName = ''
+
+  houses = [
+
+    new House({ year: '1974', name: 'Mid-Century Modern Single Family Home', bedrooms: 3, bathrooms: 2.5, sqft: 1400, price: 375000, imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg' }),
+    new House({ year: '2001', name: 'Modern Farmhouse Home', bedrooms: 4, bathrooms: 3, sqft: 2500, price: 430000, imgUrl: 'https://dlqxt4mfnxo6k.cloudfront.net/cedarknollbuilders.com/aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2J1aWxkZXJjbG91ZC9iNjI1MDk2NmJlMTNmNmVlZmU2MWMyMTlhOTQ1MWE4ZC5qcGVn/webp/1200/1200' })
+  ]
+
+
 
 }
 
